@@ -1,5 +1,6 @@
+import 'bootstrap/scss/bootstrap.scss';
 import { Header } from '@/components/Header'
-import './globals.scss'
+import { NavBar } from '@/components/NavBar/NavBar'
 
 export const metadata = {
   title: 'Home Page',
@@ -14,10 +15,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main className='container'>
-          {children}
-        </main>
+        <div className='row'>
+          <Header />
+        </div>
+
+        <div className='row'>
+          <div className='col-2'>
+            <NavBar />
+          </div>
+
+          <main className='container col'>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   )

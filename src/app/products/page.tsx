@@ -25,7 +25,7 @@ const Products = async () => {
       <ul> 
       {data.map(({ title, id }) => (
         <li key={id}>
-          <Link href={`/blog/${id}`}>
+          <Link href={`/products/${id}`}>
             {title}
           </Link>
           </li>
