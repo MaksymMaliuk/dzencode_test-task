@@ -1,0 +1,11 @@
+.datetime {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 14px;
+
+  &__time {
+    display: flex;
+    align-items: center;
+  }
+}
