@@ -7,7 +7,7 @@ const ActiveSessionsCounter = () => {
   const [activeSessions, setActiveSessions] = useState(0);
 
   useEffect(() => {
-    const socket = io();
+    const socket = io({ path: "/api/socket.io" });
     socket.on("activeSessions", (count) => {
       setActiveSessions(count);
     });
