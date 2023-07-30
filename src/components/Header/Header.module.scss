@@ -1,9 +1,11 @@
+@import '../../styles/utils/variables';
+
 .header {
   display: flex;
   padding: 0.5rem 2rem;
+  height: $header-height;
 
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.301);
-  z-index: 10;
 
   &__content {
     display: flex;

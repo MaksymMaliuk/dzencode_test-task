@@ -1,0 +1,13 @@
+@import '../styles/utils/variables';
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content__container {
+  height: calc(100vh - $header-height);
+  padding: 0 20px;
+  overflow-y: auto;
+}
