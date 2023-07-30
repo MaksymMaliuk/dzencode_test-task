@@ -1,11 +1,18 @@
 import 'bootstrap/scss/bootstrap.scss';
-import { Header } from '@/components/Header'
-import { NavBar } from '@/components/NavBar/NavBar'
+import { Header } from '@/components/Header';
+import { NavBar } from '@/components/NavBar/NavBar';
+import styles from './layout.module.scss';
+import { Roboto } from '@next/font/google';
 
 export const metadata = {
   title: 'Home Page',
   description: 'It is simple NextJS app '
 }
+
+const mainFont = Roboto({
+  subsets: ['latin'],
+  weight: '500'
+})
 
 export default function RootLayout({ 
   children,
@@ -14,19 +21,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className='row'>
-          <Header />
-        </div>
-
-        <div className='row'>
-          <div className='col-2'>
-            <NavBar />
+      <body className={mainFont.className} >
+        <div className={`${styles['main-container']}`}>
+          <div className='row gx-0'>
+            <Header />
           </div>
 
-          <main className='container col'>
-            {children}
-          </main>
+          <div className={`${styles['content']} row gx-0`}>
+            <div className='col-2 gx-0'>
+              <NavBar />
+            </div>
+
+            <main className={`${styles.content__container} col gx-0`}>
+              {children}
+            </main>
+          </div>
         </div>
       </body>
     </html>
