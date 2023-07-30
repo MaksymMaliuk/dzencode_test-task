@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './Header.module.scss';
 import shieldIcon from '../../assets/icon_shield.svg'
 import { DateTime } from '../DateTime/DateTime';
+import ActiveSessionsCounter from '../ActiveSessionCounter/ActiveSessionCounter';
 
 export const Header = () => {
   return (
@@ -18,6 +19,7 @@ export const Header = () => {
         </div>
 
         <DateTime />
+        <ActiveSessionsCounter />
       </div>
     </header>
   )
