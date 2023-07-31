@@ -1,0 +1,21 @@
+.product {
+  display: flex;
+  border-top: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+
+    &--uah::after {
+      content: ' ₴';
+    }
+
+    &--usd::after {
+      content: ' $';
+    }
+  }
+}

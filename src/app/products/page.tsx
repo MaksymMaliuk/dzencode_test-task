@@ -6,8 +6,8 @@ import {
   useState 
 } from "react";
 import productsFromServer from '../../products.json';
-import { Product }
-import Image from "next/image";
+import { ProductItem } from "@/components/Product";
+import { Product } from "@/types/Product";
 
 export const metadata = {
   title: 'Blog'
@@ -26,7 +26,7 @@ const Products: FC = () => {
         {products.map((product) => {
          
           return (
-            <Product key={product.id} product={product}/>
+            <ProductItem key={product.id} product={product}/>
           )
         })}
       </ul>
