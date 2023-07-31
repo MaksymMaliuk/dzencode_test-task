@@ -1,35 +1,34 @@
-import Link from "next/link"
+'use client'
+
+import { 
+  FC, 
+  useEffect, 
+  useState 
+} from "react";
+import productsFromServer from '../../products.json';
+import { Product }
+import Image from "next/image";
 
 export const metadata = {
   title: 'Blog'
 }
 
-interface Posts {
-  userId: string
-  id: string
-  title: string
-  body: string
-}
+const Products: FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
 
-const getData = async (): Promise<Posts[]> => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  return res.json()
-}
-
-const Products = async () => {
-  const data = await getData();
+  useEffect(() => {
+    setProducts(productsFromServer)
+  }, [])
 
   return ( 
     <>
-      <h2>Posts</h2>
       <ul> 
-      {data.map(({ title, id }) => (
-        <li key={id}>
-          <Link href={`/products/${id}`}>
-            {title}
-          </Link>
-          </li>
-        ))}
+        {products.map((product) => {
+         
+          return (
+            <Product key={product.id} product={product}/>
+          )
+        })}
       </ul>
     </>
   )
