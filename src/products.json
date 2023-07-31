@@ -188,5 +188,100 @@
     ],
     "order": 10,
     "date": "2023-07-31 12:09:33"
+  },
+  {
+    "id": 10,
+    "serialNumber": 7777,
+    "isNew": 1,
+    "photo": "../assets/products/phones/samsung-galaxy-s23.png",
+    "title": "Samsung Galaxy S23",
+    "type": "Phones",
+    "specification": "Specification 10",
+    "guarantee": {
+      "start": "2023-07-31 15:30:00",
+      "end": "2025-07-31 15:30:00"
+    },
+    "price": [
+      {"value": 760, "symbol": "USD", "isDefault": 0},
+      {"value": 28000, "symbol": "UAH", "isDefault": 1}
+    ],
+    "order": 10,
+    "date": "2023-07-31 12:09:33"
+  },
+  {
+    "id": 10,
+    "serialNumber": 7777,
+    "isNew": 1,
+    "photo": "../assets/products/phones/samsung-galaxy-s23.png",
+    "title": "Samsung Galaxy S23",
+    "type": "Phones",
+    "specification": "Specification 10",
+    "guarantee": {
+      "start": "2023-07-31 15:30:00",
+      "end": "2025-07-31 15:30:00"
+    },
+    "price": [
+      {"value": 760, "symbol": "USD", "isDefault": 0},
+      {"value": 28000, "symbol": "UAH", "isDefault": 1}
+    ],
+    "order": 10,
+    "date": "2023-07-31 12:09:33"
+  },
+  {
+    "id": 10,
+    "serialNumber": 7777,
+    "isNew": 1,
+    "photo": "../assets/products/phones/samsung-galaxy-s23.png",
+    "title": "Samsung Galaxy S23",
+    "type": "Phones",
+    "specification": "Specification 10",
+    "guarantee": {
+      "start": "2023-07-31 15:30:00",
+      "end": "2025-07-31 15:30:00"
+    },
+    "price": [
+      {"value": 760, "symbol": "USD", "isDefault": 0},
+      {"value": 28000, "symbol": "UAH", "isDefault": 1}
+    ],
+    "order": 10,
+    "date": "2023-07-31 12:09:33"
+  },
+  {
+    "id": 10,
+    "serialNumber": 7777,
+    "isNew": 1,
+    "photo": "../assets/products/phones/samsung-galaxy-s23.png",
+    "title": "Samsung Galaxy S23",
+    "type": "Phones",
+    "specification": "Specification 10",
+    "guarantee": {
+      "start": "2023-07-31 15:30:00",
+      "end": "2025-07-31 15:30:00"
+    },
+    "price": [
+      {"value": 760, "symbol": "USD", "isDefault": 0},
+      {"value": 28000, "symbol": "UAH", "isDefault": 1}
+    ],
+    "order": 10,
+    "date": "2023-07-31 12:09:33"
+  },
+  {
+    "id": 10,
+    "serialNumber": 7777,
+    "isNew": 1,
+    "photo": "../assets/products/phones/samsung-galaxy-s23.png",
+    "title": "Samsung Galaxy S23",
+    "type": "Phones",
+    "specification": "Specification 10",
+    "guarantee": {
+      "start": "2023-07-31 15:30:00",
+      "end": "2025-07-31 15:30:00"
+    },
+    "price": [
+      {"value": 760, "symbol": "USD", "isDefault": 0},
+      {"value": 28000, "symbol": "UAH", "isDefault": 1}
+    ],
+    "order": 10,
+    "date": "2023-07-31 12:09:33"
   }
 ]

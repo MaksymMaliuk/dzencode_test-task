@@ -28,11 +28,11 @@ export default function RootLayout({
           </div>
 
           <div className={`${styles['content']} row gx-0`}>
-            <div className='col-2 gx-0'>
+            <div className='col-2 gx-0 z-1'>
               <NavBar />
             </div>
 
-            <main className={`${styles.content__container} col gx-0`}>
+            <main className={`${styles['content__container']} col gx-0`}>
               {children}
             </main>
           </div>
