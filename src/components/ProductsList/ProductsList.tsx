@@ -1,3 +1,5 @@
+'use client'
+
 import { FC, useEffect, useState } from "react"
 import { ProductItem } from "../ProductItem/ProductItem"
 import { Product } from "@/types/Product";
@@ -13,7 +15,6 @@ export const ProductsList: FC = () => {
   return (
     <ul> 
         {products.map((product) => {
-         
           return (
             <ProductItem key={product.id} product={product}/>
         )
