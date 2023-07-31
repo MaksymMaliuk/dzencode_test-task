@@ -21,16 +21,16 @@ export const Product: FC<Props> = ({ product }) => {
   const usdPrice = findPriceBySymbol(price, 'USD'); 
 
   return(
-    <li className={styles['product']}>
-      <div className={styles['product__title']}>
+    <li className={`${styles['product']} row`}>
+      <div className={`${styles['product__title']} col`}>
         {title}
       </div>
 
-      <div className={styles['product__type']}>
+      <div className={`${styles['product__type']} col`}>
         {type}
       </div>
 
-      <div className={styles['product__price']}>
+      <div className={`${styles['product__price']} col`}>
         <span className={styles['product__price--uah']}>
           {uahPrice}
         </span>
