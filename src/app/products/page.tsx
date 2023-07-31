@@ -1,12 +1,11 @@
-import { ProductsList } from "@/components/ProductsList/ProductsList";
+import { ProductsList } from "@/components/ProductsList";
 import { FC } from "react";
 
 export const metadata = {
-  title: 'Blog'
+  title: 'Products'
 }
 
 const Products: FC = () => {
-
   return <ProductsList />
 }
 
