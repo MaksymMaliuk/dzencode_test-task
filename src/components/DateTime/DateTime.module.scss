@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 14px;
+  gap: 10px;
 
   &__time {
     display: flex;
     align-items: center;
+    gap: 5px;
   }
 }
