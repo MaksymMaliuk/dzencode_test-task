@@ -10,7 +10,8 @@ export const ProductItem: FC<Props> = ({ product }) => {
   const {
     title,
     price,
-    type
+    type,
+    date
   } = product;
 
   const findPriceBySymbol = (price: Price[], symbol: string) => {
@@ -27,11 +28,15 @@ export const ProductItem: FC<Props> = ({ product }) => {
         {title}
       </div>
 
-      <div className={`${styles['product__type']} col`}>
+      <div className={`${styles['product__type']} col-2`}>
         {type}
       </div>
 
-      <div className={`${styles['product__price']} col`}>
+      <div className={`${styles['product__date']} col-2`}>
+        {date}
+      </div>
+
+      <div className={`${styles['product__price']} col-2`}>
         <span className={styles['product__price--uah']}>
           {uahPrice}
         </span>

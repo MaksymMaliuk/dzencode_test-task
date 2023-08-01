@@ -3,7 +3,7 @@ import styles from './OrdersList.module.scss';
 
 export const OrdersList = () => {
   return (
-    <div>
+    <>
       <div className='mb-5'>
         <h2 className='mb-0'>
           Orders: 
@@ -24,6 +24,6 @@ export const OrdersList = () => {
         <OrderItem />
         <OrderItem />
       </ul>
-  </div>
+  </>
   )
 }

@@ -1,15 +1,18 @@
+@import '../../styles/utils/variables';
+
 .product {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #b1b1b1;
-  border-radius: 4px;
-  margin-bottom: 6px;
+  border: $item-border;
+  border-radius: $item-border-radius;
+  padding: 15px 10px;
 
 
   &__price {
     display: flex;
+    align-items: center;
     flex-direction: column;
 
     &--uah::after {
