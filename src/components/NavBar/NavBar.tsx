@@ -29,8 +29,8 @@ export const NavBar = () => {
     <nav className={styles.nav}>
       <div className={styles.nav__user}>
         <Image 
-          width={100}
-          height={100} 
+          width={150}
+          height={150} 
           src={chad} 
           alt='user photo' 
       />
