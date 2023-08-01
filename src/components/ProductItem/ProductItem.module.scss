@@ -1,9 +1,11 @@
 .product {
   display: flex;
-  border-top: 1px solid black;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  background-color: #fff;
+  border: 1px solid #b1b1b1;
+  border-radius: 4px;
+  margin-bottom: 6px;
 
 
   &__price {
