@@ -1,4 +1,5 @@
 import 'bootstrap/scss/bootstrap.scss';
+import '../styles/custom-scrollbar.scss';
 import { Header } from '@/components/Header';
 import { NavBar } from '@/components/NavBar/NavBar';
 import styles from './layout.module.scss';
