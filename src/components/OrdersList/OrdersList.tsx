@@ -21,6 +21,6 @@ export const OrdersList = () => {
           <OrderItem key={order.id} order={order} />
         ))}
       </ul>
-  </>
+    </>
   )
 }
