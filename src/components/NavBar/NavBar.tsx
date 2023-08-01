@@ -6,8 +6,8 @@ import chad from '../../assets/chad.jpg';
 
 const navItems = [
   { 
-    label: 'Income', 
-    href: '/income' 
+    label: 'Orders', 
+    href: '/orders' 
   }, { 
     label: 'Groups', 
     href: '/groups' 

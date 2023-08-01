@@ -1,0 +1,8 @@
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 540px;
+  width: 100%;
+  gap: 10px;
+}

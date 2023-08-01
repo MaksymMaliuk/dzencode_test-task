@@ -23,20 +23,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mainFont.className} >
-        <div className={`${styles['main-container']}`}>
-          <div className='row gx-0'>
-            <Header />
+        <div className='row gx-0'>
+          <Header />
+        </div>
+
+        <div className={`${styles['content']} row gx-0`}>
+          <div className='col-2 gx-0 z-1'>
+            <NavBar />
           </div>
 
-          <div className={`${styles['content']} row gx-0`}>
-            <div className='col-2 gx-0 z-1'>
-              <NavBar />
-            </div>
-
-            <main className={`${styles['content__container']} col gx-0`}>
-              {children}
-            </main>
-          </div>
+          <main className={`${styles['content__container']} col gx-0`}>
+            {children}
+          </main>
         </div>
       </body>
     </html>
