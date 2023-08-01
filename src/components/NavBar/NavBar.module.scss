@@ -1,6 +1,8 @@
+@import '../../styles/utils/variables';
+
 .nav {
   display: flex;
-  justify-content: center;
+  padding-top: 100px;
   flex-direction: column;
   align-items: center;
   
@@ -10,6 +12,7 @@
   &__user {
     overflow: hidden;
     border-radius: 50%;
+    box-shadow: 0 0 20px rgb(75, 75, 75);
   }
 
   &__list {
@@ -25,7 +28,11 @@
   &__link {
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    color: $font-color-main;
+
+
     &:hover {
       text-decoration: underline;
     }
