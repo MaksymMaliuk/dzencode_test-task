@@ -1,11 +1,23 @@
+import { FC } from 'react';
 import styles from './OrderItem.module.scss';
+import { Order } from '@/types/Order';
 
-export const OrderItem = () => {
+type Props = {
+  order: Order
+}
+
+export const OrderItem: FC<Props> = ({ order }) => {
+  const {
+    title,
+    date,
+    products
+  } = order;
+
   return (
     <li className={`${styles['order-item']} row gx-0`}>
       <div className='col gx-0 d-flex justify-content-center'>
         <span className={styles['order-item__title']}>
-          Very long long order name
+          {title}
         </span>
       </div>
 
@@ -22,11 +34,11 @@ export const OrderItem = () => {
 
       <div className={`${styles['order-item__date']} col-2 gx-0`}>
         <span className={styles['order-item__date--short']}>
-          01/08
+          {date}
         </span>
 
         <span className={styles['order-item__date--long']}>
-          01/Aug/2023
+          {date}
         </span>
       </div>
 
