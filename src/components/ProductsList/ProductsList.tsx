@@ -14,7 +14,11 @@ export const ProductsList: FC = () => {
   }, [])
 
   return (
-    <div className={styles['product-list-container']}>
+    <>
+      <h2 className='mb-5'>
+        Products: 
+      </h2>
+
       <ul className={`${styles['product-list']} container`}> 
           {products.map((product) => {
             return (
@@ -22,7 +26,6 @@ export const ProductsList: FC = () => {
             )
         })}
       </ul>
-    </div>
-    
+    </>
   )
 }
