@@ -4,11 +4,12 @@ import Image from 'next/image';
 
 type Props = {
   iconPath: string
+  onClick: () => void
 }
 
-export const Button: FC<Props> = ({ iconPath }) => {
+export const Button: FC<Props> = ({ iconPath, onClick }) => {
   return(
-    <button className={styles['button']}>
+    <button onClick={onClick} className={styles['button']}>
       <Image src={iconPath} alt='image' />
     </button>
   )

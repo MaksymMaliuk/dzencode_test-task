@@ -3,18 +3,25 @@ import styles from './ProductItem.module.scss'
 import { Price, Product } from "../../types/Product";
 import { Button } from "../Button";
 import trashCan from '../../assets/icon_trash.svg';
+import { useDispatch } from "react-redux";
+import { actions } from "@/services/store/productsSlice";
 
 type Props = {
   product: Product
 }
 
 export const ProductItem: FC<Props> = ({ product }) => {
+  const dispatch = useDispatch();
   const {
     title,
     price,
     type,
     date
   } = product;
+
+  const handleRemoveProduct = (id: number) => (
+    dispatch(actions.removeProduct(id))
+  )
 
   const findPriceBySymbol = (price: Price[], symbol: string) => {
     const foundPrice = price.find(item => item.symbol === symbol);
@@ -49,7 +56,10 @@ export const ProductItem: FC<Props> = ({ product }) => {
       </div>
 
       <div className={`${styles['product__delete-button']} col-2`}>
-        <Button iconPath={trashCan} />
+        <Button 
+          onClick={() => handleRemoveProduct(product.id)} 
+          iconPath={trashCan} 
+        />
       </div>
     </li>
   )

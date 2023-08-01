@@ -8,7 +8,7 @@ import { RootState } from "@/types/storeTypes/RootState";
 
 export const ProductsList: FC = () => {
   const products = useSelector((state: RootState) => state.products)
-  
+
   return (
     <>
       <h2 className='mb-5'>
@@ -18,7 +18,7 @@ export const ProductsList: FC = () => {
       <ul className={`${styles['product-list']} p-0`}> 
           {products.map((product) => {
             return (
-              <ProductItem key={product.id} product={product}/>
+              <ProductItem key={product.id} product={product} />
             )
         })}
       </ul>
