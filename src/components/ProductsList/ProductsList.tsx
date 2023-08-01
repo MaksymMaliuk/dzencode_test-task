@@ -16,10 +16,10 @@ export const ProductsList: FC = () => {
   return (
     <>
       <h2 className='mb-5'>
-        Products: 
+        Products / {products.length}
       </h2>
 
-      <ul className={`${styles['product-list']} container`}> 
+      <ul className={`${styles['product-list']} p-0`}> 
           {products.map((product) => {
             return (
               <ProductItem key={product.id} product={product}/>

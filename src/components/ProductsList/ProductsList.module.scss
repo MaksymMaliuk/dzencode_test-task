@@ -3,7 +3,7 @@
 .product-list {
   display: flex;
   flex-direction: column;
+  overflow: auto;
   gap: 10px;
   height: 540px;
-  overflow-y: scroll;
 }

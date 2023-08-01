@@ -23,7 +23,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
   const usdPrice = findPriceBySymbol(price, 'USD'); 
 
   return(
-    <li className={`${styles['product']} row`}>
+    <li className={`${styles['product']} row gx-0`}>
       <div className={`${styles['product__title']} col`}>
         {title}
       </div>
