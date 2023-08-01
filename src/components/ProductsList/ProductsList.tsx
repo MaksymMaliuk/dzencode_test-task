@@ -2,17 +2,13 @@
 
 import { FC, useEffect, useState } from "react";
 import { ProductItem } from "../ProductItem/ProductItem";
-import { Product } from "@/types/Product";
 import styles from './ProductsList.module.scss';
-import productsFromServer from '../../products.json';
+import { useSelector } from "react-redux";
+import { RootState } from "@/types/storeTypes/RootState";
 
 export const ProductsList: FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    setProducts(productsFromServer)
-  }, [])
-
+  const products = useSelector((state: RootState) => state.products)
+  
   return (
     <>
       <h2 className='mb-5'>
