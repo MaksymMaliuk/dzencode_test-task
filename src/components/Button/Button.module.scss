@@ -1,0 +1,16 @@
+@import '../../styles/utils/variables';
+
+.button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  outline: none;
+  border-style: none;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #d8d8d8;
+    transition: 0.35s;
+  }
+}

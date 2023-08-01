@@ -1,6 +1,8 @@
 import { FC } from "react"
 import styles from './ProductItem.module.scss'
 import { Price, Product } from "../../types/Product";
+import { Button } from "../Button";
+import trashCan from '../../assets/icon_trash.svg';
 
 type Props = {
   product: Product
@@ -44,6 +46,10 @@ export const ProductItem: FC<Props> = ({ product }) => {
         <span className={styles['product__price--usd']}>
           {usdPrice}
         </span>
+      </div>
+
+      <div className={`${styles['product__delete-button']} col-2`}>
+        <Button iconPath={trashCan} />
       </div>
     </li>
   )
