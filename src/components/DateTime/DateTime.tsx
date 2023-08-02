@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from './DateTime.module.scss'
-import clockIcon from '../../assets/icon_clock.svg';
+import clockIcon from '../../public/assets/icon_clock.svg';
 import { useEffect, useState } from "react";
 
 export const DateTime = () => {
