@@ -1,6 +1,9 @@
 import { FC } from 'react';
 import styles from './OrderItem.module.scss';
 import { Order } from '@/types/Order';
+import { Button } from '../Button';
+import iconList from '../../public/assets/icon_list.svg';
+
 
 type Props = {
   order: Order
@@ -13,6 +16,21 @@ export const OrderItem: FC<Props> = ({ order }) => {
     products
   } = order;
 
+  const getSum = (currency: string) => {
+    const sum = products.reduce(
+      (accumulator, product) => {
+        const currencyPrice  = product.price.find(({ symbol }) => symbol === currency);
+        if (currencyPrice ) {
+          accumulator += currencyPrice .value
+        }
+
+        return accumulator
+      }, 0
+    );
+
+    return sum;
+  }
+
   return (
     <li className={`${styles['order-item']} row gx-0`}>
       <div className='col gx-0 d-flex justify-content-center'>
@@ -23,12 +41,10 @@ export const OrderItem: FC<Props> = ({ order }) => {
 
 
       <div className={`${styles['order-item__content']} col-2 gx-0`}>
-        <span className={styles['content__button']}>
-          <button>BUTTON</button>
-        </span>
+        <Button iconPath={iconList} onClick={() => {}}/>
 
         <span className={styles['content__counter']}>
-          23
+          {order.products?.length}
         </span>
       </div>
 
@@ -44,11 +60,11 @@ export const OrderItem: FC<Props> = ({ order }) => {
 
       <div className={`${styles['order-item__total-price']} col-2 gx-0`}>
         <span className={styles['order-item__total-price--usd']}>
-          100
+          {getSum('USD')}
         </span>
         
         <span className={styles['order-item__total-price--uah']}>
-          3800
+          {getSum('UAH')}
         </span>
 
       </div>

@@ -6,7 +6,14 @@ import styles from './OrdersList.module.scss';
 import { RootState } from "@/types/storeTypes/RootState";
 
 export const OrdersList = () => {
-  const orders = useSelector((state: RootState) => state.orders)
+  const orders = useSelector((state: RootState) => state.orders);
+  const products = useSelector((state: RootState) => state.products);
+
+  const ordersWithProducts = orders.map(order => {
+    const findProducts = products.filter(product => product.order === order.id || undefined)
+
+    return { ...order, products: findProducts }
+  });
 
   return (
     <>
@@ -17,7 +24,7 @@ export const OrdersList = () => {
       </div>
 
       <ul className={`${styles['orders-list']} m-0 p-0`}>
-        {orders.map(order => (
+        {ordersWithProducts.map(order => (
           <OrderItem key={order.id} order={order} />
         ))}
       </ul>

@@ -3,7 +3,6 @@ import ordersFromServer from '../../../orders.json';
 import { Order } from '@/types/Order';
 
 const initialState = [...ordersFromServer];
-console.log(initialState);
 
 const ordersSlice = createSlice({
   name: 'orders',
