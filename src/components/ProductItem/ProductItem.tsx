@@ -5,8 +5,7 @@ import { Button } from "../Button";
 import trashCan from '../../public/assets/icon_trash.svg';
 import { useDispatch } from "react-redux";
 import { actions } from "@/services/store/productsSlice";
-import Image from "next/image";
-// import images from '../../public/assets/products/headphones/apple-airpods-pro-2nd-generation.png'
+import Image from "next/legacy/image";
 
 type Props = {
   product: Product
@@ -31,9 +30,10 @@ export const ProductItem: FC<Props> = ({ product }) => {
     return foundPrice ? foundPrice.value : undefined;
   };
 
-  const uahPrice = findPriceBySymbol(price, 'UAH'); 
+  const uahPrice = findPriceBySymbol(price, 'UAH');
   const usdPrice = findPriceBySymbol(price, 'USD');
-  const BASE_URL = 'https://inventory-backend-app.onrender.com'
+
+  const BASE_URL = 'https://inventory-backend-app.onrender.com';
 
   return(
     <li className={`${styles['product']} row gx-0`}>
@@ -41,6 +41,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
         <Image 
           src={`${BASE_URL}/${photo}`} 
           alt={title}
+          objectFit="contain"
           width={50}
           height={50}
         />
