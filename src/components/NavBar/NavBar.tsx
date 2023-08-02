@@ -7,33 +7,23 @@ import chad from '../../public/assets/chad.jpg';
 const navItems = [
   { 
     label: 'Orders', 
-    href: '/orders' 
-  }, { 
-    label: 'Groups', 
-    href: '/groups' 
+    href: '/orders'
   }, { 
     label: 'Products', 
-    href: '/products' 
-  }, { 
-    label: 'Users', 
-    href: '/users' 
-  }, { 
-    label: 'Settings', 
-    href: '/settings' 
+    href: '/products'
   },
 ];
 
 export const NavBar = () => {
-
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__user}>
         <Image 
           width={150}
-          height={150} 
-          src={chad} 
-          alt='user photo' 
-      />
+          height={150}
+          src={chad}
+          alt='user photo'
+        />
       </div>
       
       <ul className={styles.nav__list}>
