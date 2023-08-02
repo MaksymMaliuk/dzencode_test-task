@@ -72,7 +72,7 @@
       {"value": 136, "symbol": "USD", "isDefault": 0},
       {"value": 5000, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 4,
+    "order": 1,
     "date": "2023-07-31 12:09:33"
   },
   {
@@ -91,7 +91,7 @@
       {"value": 1150, "symbol": "USD", "isDefault": 0},
       {"value": 42000, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 5,
+    "order": 3,
     "date": "2023-07-31 12:09:33"
   },
   {
@@ -110,7 +110,7 @@
       {"value": 1360, "symbol": "USD", "isDefault": 0},
       {"value": 50000, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 6,
+    "order": 2,
     "date": "2023-07-31 12:09:33"
   },
   {
@@ -129,7 +129,7 @@
       {"value": 380, "symbol": "USD", "isDefault": 0},
       {"value": 14000, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 7,
+    "order": 1,
     "date": "2023-07-31 12:09:33"
   },
   {
@@ -148,7 +148,7 @@
       {"value": 410, "symbol": "USD", "isDefault": 0},
       {"value": 15100, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 8,
+    "order": 3,
     "date": "2023-07-31 12:09:33"
   },
   {
@@ -167,7 +167,7 @@
       {"value": 50, "symbol": "USD", "isDefault": 0},
       {"value": 1100, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 9,
+    "order": 2,
     "date": "2023-07-31 12:09:33"
   },
   {
@@ -186,7 +186,7 @@
       {"value": 760, "symbol": "USD", "isDefault": 0},
       {"value": 28000, "symbol": "UAH", "isDefault": 1}
     ],
-    "order": 10,
+    "order": 2,
     "date": "2023-07-31 12:09:33"
   }
 ]
