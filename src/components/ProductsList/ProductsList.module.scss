@@ -7,3 +7,19 @@
   gap: 10px;
   height: 540px;
 }
+
+.filter {
+  display: flex;
+  align-items: center;
+
+
+  &__selector {
+    max-width: 200px;
+    max-height: 50px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    margin: 0;
+  }
+}
