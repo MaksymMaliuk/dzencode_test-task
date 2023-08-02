@@ -2,9 +2,11 @@ import { FC } from "react"
 import styles from './ProductItem.module.scss'
 import { Price, Product } from "../../types/Product";
 import { Button } from "../Button";
-import trashCan from '../../assets/icon_trash.svg';
+import trashCan from '../../public/assets/icon_trash.svg';
 import { useDispatch } from "react-redux";
 import { actions } from "@/services/store/productsSlice";
+import Image from "next/image";
+// import images from '../../public/assets/products/headphones/apple-airpods-pro-2nd-generation.png'
 
 type Props = {
   product: Product
@@ -16,7 +18,8 @@ export const ProductItem: FC<Props> = ({ product }) => {
     title,
     price,
     type,
-    date
+    date,
+    photo
   } = product;
 
   const handleRemoveProduct = (id: number) => (
@@ -29,10 +32,20 @@ export const ProductItem: FC<Props> = ({ product }) => {
   };
 
   const uahPrice = findPriceBySymbol(price, 'UAH'); 
-  const usdPrice = findPriceBySymbol(price, 'USD'); 
+  const usdPrice = findPriceBySymbol(price, 'USD');
+  const BASE_URL = 'https://inventory-backend-app.onrender.com'
 
   return(
     <li className={`${styles['product']} row gx-0`}>
+      <div className={`${styles['product__image']} col-1`}>
+        <Image 
+          src={`${BASE_URL}/${photo}`} 
+          alt={title}
+          width={50}
+          height={50}
+        />
+      </div>
+
       <div className={`${styles['product__title']} col`}>
         {title}
       </div>
@@ -41,7 +54,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
         {type}
       </div>
 
-      <div className={`${styles['product__date']} col-2`}>
+      <div className={`${styles['product__date']} col-1`}>
         {date}
       </div>
 
@@ -55,7 +68,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
         </span>
       </div>
 
-      <div className={`${styles['product__delete-button']} col-2`}>
+      <div className={`${styles['product__delete-button']} col-1`}>
         <Button 
           onClick={() => handleRemoveProduct(product.id)} 
           iconPath={trashCan} 

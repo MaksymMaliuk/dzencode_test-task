@@ -2,7 +2,7 @@ import Link from 'next/link';
 import 'bootstrap/scss/bootstrap-reboot.scss';
 import styles from './NavBar.module.scss';
 import Image from 'next/image';
-import chad from '../../assets/chad.jpg';
+import chad from '../../public/assets/chad.jpg';
 
 const navItems = [
   { 

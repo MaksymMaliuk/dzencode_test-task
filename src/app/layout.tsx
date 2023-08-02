@@ -29,7 +29,7 @@ export default function RootLayout({
             <Header />
           </div>
 
-          <div className={`${styles['content']} row gx-0`}>
+          <div className={`row gx-0`}>
             <div className='col-2 gx-0 z-1'>
               <NavBar />
             </div>

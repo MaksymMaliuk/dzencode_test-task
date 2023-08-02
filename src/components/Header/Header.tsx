@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.scss';
-import shieldIcon from '../../assets/icon_shield.svg'
+import shieldIcon from '../../public/assets/icon_shield.svg'
 import { DateTime } from '../DateTime/DateTime';
 
 export const Header = () => {
