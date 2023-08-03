@@ -50,5 +50,13 @@
     display: inherit;
     flex-direction: column;
     align-items: center;
+
+    &--usd::after {
+      content: ' $';
+    }
+
+    &--uah::after {
+      content: ' ₴';
+    }
   }
 }
