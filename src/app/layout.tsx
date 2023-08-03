@@ -8,7 +8,7 @@ import Providers from './providers';
 
 export const metadata = {
   title: 'Home Page',
-  description: 'It is simple NextJS app '
+  description: 'It is simple NextJS app ',
 }
 
 const mainFont = Roboto({
