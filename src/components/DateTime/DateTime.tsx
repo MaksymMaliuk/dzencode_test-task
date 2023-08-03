@@ -12,6 +12,7 @@ export const DateTime = () => {
     hour: '2-digit',
     minute: '2-digit',
   });
+  
   const fullDate = datetime.toLocaleDateString(undefined, {
     dateStyle: 'full',
    });

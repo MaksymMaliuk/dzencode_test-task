@@ -8,24 +8,36 @@ import classnames from 'classnames';
 
 type Props = {
   order: Order
+  onSelect: (orderId: number) => void
+  isSelected: boolean
 }
 
-
-export const OrderItem: FC<Props> = ({ order }) => {
-  const [isSelected, setIsSelected] = useState(false);
-
+export const OrderItem: FC<Props> = ({ 
+  order, 
+  onSelect, 
+  isSelected 
+}) => {
   const {
     title,
     date,
     products
   } = order;
-
-  const orderModclass = classnames(
-    isSelected 
-    ? styles['order--short'] 
-    : styles['order'],
-  );
   
+  const dividedData = date.split(' ');
+
+  const formatDate = (inputDate: string) => {
+    const months = [
+      'january', 'february', 'march', 'april', 'may', 'june',
+      'july', 'august', 'september', 'october', 'novemver', 'december'
+    ];
+
+    const dateParts = inputDate.split('-');
+    const year = parseInt(dateParts[0]);
+    const month = parseInt(dateParts[1]) - 1;
+    const day = parseInt(dateParts[2]);
+
+    return `${day} ${months[month]} ${year} p.`;
+  };
 
   const getSum = (currency: string) => {
     const sum = products.reduce(
@@ -46,42 +58,54 @@ export const OrderItem: FC<Props> = ({ order }) => {
   const sumUSD = getSum('USD');
 
   return (
-    <li className={orderModclass}>
-      <div className='col gx-0 d-flex justify-content-center'>
-        <span className={styles['order__title']}>
-          {title}
-        </span>
+    <li className={styles['order']}>
+      {!isSelected && (
+        <div className='col gx-0 d-flex justify-content-center'>
+          <span className={styles['order__title']}>
+            {title}
+          </span>
+        </div>
+      )}
+
+      <div className={`${styles['order__button']} col-2 gx-0`}>
+        <Button iconPath={iconList} onClick={() => onSelect(order.id)}/>
       </div>
 
-
-      <div className={`${styles['order__content']} col-2 gx-0`}>
-        <Button iconPath={iconList} onClick={() => {}}/>
-
-        <span className={styles['content__counter']}>
+      <div className={`${styles['order__counter']} col-3 mx-2`}>
+        <span className={styles['order__counter-value']}>
           {order.products?.length}
         </span>
+
+        <span className={styles['order__counter-label']}>
+          Products
+        </span>
       </div>
 
-      <div className={`${styles['order__date']} col-2 gx-0`}>
+      <div className={classnames(
+        styles['order__date'],
+        isSelected ? "col" : "col-2",
+         "gx-0"
+        )}
+      >
         <span className={styles['order__date--short']}>
-          {date}
+          {formatDate(dividedData[0])}
         </span>
 
         <span className={styles['order__date--long']}>
-          {date}
+          {dividedData[0]}
         </span>
       </div>
-
-      <div className={`${styles['order__total-price']} col-2 gx-0`}>
-        <span className={styles['order__total-price--usd']}>
-          {sumUSD}
-        </span>
-        
-        <span className={styles['order__total-price--uah']}>
-          {sumUAH}
-        </span>
-
-      </div>
+      {!isSelected && (
+        <div className={`${styles['order__total-price']} col-2 gx-0`}>
+          <span className={styles['order__total-price--usd']}>
+            {sumUSD}
+          </span>
+          
+          <span className={styles['order__total-price--uah']}>
+            {sumUAH}
+          </span>
+        </div>
+      )}
     </li>
   )
 }
