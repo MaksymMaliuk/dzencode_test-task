@@ -3,18 +3,214 @@
     "id": 1,
     "title": "Order 1",
     "date": "2017-06-29 12:09:33",
-    "description": "desc"
+    "description": "desc",
+    "products": [
+      {
+        "id": 1,
+        "serialNumber": 9876,
+        "isNew": 1,
+        "photo": "/products/headphones/apple-airpods-pro-2nd-generation.png",
+        "title": "Apple AirPods Pro 2nd generation",
+        "type": "Headphones",
+        "specification": "Specification 1",
+        "guarantee": {
+          "start": "2023-07-31 08:30:00",
+          "end": "2025-07-31 08:30:00"
+        },
+        "price": [
+          {"value": 250, "symbol": "USD", "isDefault": 0},
+          {"value": 9000, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 1,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 2,
+        "serialNumber": 5432,
+        "isNew": 1,
+        "photo": "/products/monitors/msi-optix-g24c4.png",
+        "title": "MSI Optix G24C4",
+        "type": "Monitors",
+        "specification": "Specification 2",
+        "guarantee": {
+          "start": "2023-07-31 09:45:00",
+          "end": "2024-07-31 09:45:00"
+        },
+        "price": [
+          {"value": 160, "symbol": "USD", "isDefault": 0},
+          {"value": 5800, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 2,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 3,
+        "serialNumber": 2468,
+        "isNew": 1,
+        "photo": "/products/videocards/msi-geforce-rtx-4090-gaming-x-trio-24g.png",
+        "title": "MSI GeForce RTX 4090 GAMING X TRIO 24G",
+        "type": "Videocards",
+        "specification": "Specification 3",
+        "guarantee": {
+          "start": "2023-07-31 10:15:00",
+          "end": "2025-07-31 10:15:00"
+        },
+        "price": [
+          {"value": 80, "symbol": "USD", "isDefault": 0},
+          {"value": 1700, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 3,
+        "date": "2023-07-31 12:09:33"
+      }
+    ]
   },
   {
     "id": 2,
     "title": "Order 2",
     "date": "2017-06-29 12:09:33",
-    "description": "desc"
+    "description": "desc",
+    "products": [
+      {
+        "id": 4,
+        "serialNumber": 1357,
+        "isNew": 1,
+        "photo": "/products/headphones/marshall-major-iv.png",
+        "title": "Marshall Major IV",
+        "type": "Headphones",
+        "specification": "Specification 4",
+        "guarantee": {
+          "start": "2023-07-31 11:00:00",
+          "end": "2024-07-31 11:00:00"
+        },
+        "price": [
+          {"value": 136, "symbol": "USD", "isDefault": 0},
+          {"value": 5000, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 1,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 5,
+        "serialNumber": 7777,
+        "isNew": 1,
+        "photo": "/products/phones/apple-iphone-14-pro.png",
+        "title": "Apple iPhone 14 Pro",
+        "type": "Phones",
+        "specification": "Specification 5",
+        "guarantee": {
+          "start": "2023-07-31 11:45:00",
+          "end": "2025-07-31 11:45:00"
+        },
+        "price": [
+          {"value": 1150, "symbol": "USD", "isDefault": 0},
+          {"value": 42000, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 3,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 6,
+        "serialNumber": 8888,
+        "isNew": 1,
+        "photo": "/products/videocards/asus-geforce-rtx-4080-tuf-16gb.png",
+        "title": "Asus GeForce RTX 4080 TUF 16GB",
+        "type": "Videocards",
+        "specification": "Specification 6",
+        "guarantee": {
+          "start": "2023-07-31 12:30:00",
+          "end": "2024-07-31 12:30:00"
+        },
+        "price": [
+          {"value": 1360, "symbol": "USD", "isDefault": 0},
+          {"value": 50000, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 2,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 7,
+        "serialNumber": 9999,
+        "isNew": 0,
+        "photo": "/products/phones/xiaomi-11t.png",
+        "title": "Xiaomi 11T",
+        "type": "Phones",
+        "specification": "Specification 7",
+        "guarantee": {
+          "start": "2023-07-31 13:15:00",
+          "end": "2025-07-31 13:15:00"
+        },
+        "price": [
+          {"value": 380, "symbol": "USD", "isDefault": 0},
+          {"value": 14000, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 1,
+        "date": "2023-07-31 12:09:33"
+      }
+    ]
   },
   {
     "id": 3,
     "title": "Order 3",
     "date": "2017-06-29 12:09:33",
-    "description": "desc"
+    "description": "desc",
+    "products": [
+      {
+        "id": 8,
+        "serialNumber": 2468,
+        "isNew": 0,
+        "photo": "/products/monitors/samsung-odyssey-g5a-27.png",
+        "title": "Samsung Odyssey G5A 27",
+        "type": "Monitors",
+        "specification": "Specification 8",
+        "guarantee": {
+          "start": "2023-07-31 14:00:00",
+          "end": "2024-07-31 14:00:00"
+        },
+        "price": [
+          {"value": 410, "symbol": "USD", "isDefault": 0},
+          {"value": 15100, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 3,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 9,
+        "serialNumber": 1357,
+        "isNew": 0,
+        "photo": "/products/monitors/lg-ultragear-27gp850.png",
+        "title": "LG UltraGear 27GP850",
+        "type": "Monitors",
+        "specification": "Specification 9",
+        "guarantee": {
+          "start": "2023-07-31 14:45:00",
+          "end": "2024-07-31 14:45:00"
+        },
+        "price": [
+          {"value": 50, "symbol": "USD", "isDefault": 0},
+          {"value": 1100, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 2,
+        "date": "2023-07-31 12:09:33"
+      },
+      {
+        "id": 10,
+        "serialNumber": 7777,
+        "isNew": 1,
+        "photo": "/products/phones/samsung-galaxy-s23.png",
+        "title": "Samsung Galaxy S23",
+        "type": "Phones",
+        "specification": "Specification 10",
+        "guarantee": {
+          "start": "2023-07-31 15:30:00",
+          "end": "2025-07-31 15:30:00"
+        },
+        "price": [
+          {"value": 760, "symbol": "USD", "isDefault": 0},
+          {"value": 28000, "symbol": "UAH", "isDefault": 1}
+        ],
+        "order": 2,
+        "date": "2023-07-31 12:09:33"
+      }
+    ]
   }
 ]

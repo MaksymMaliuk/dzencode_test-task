@@ -1,8 +1,12 @@
 @import '../../styles/utils/variables';
 
 .button {
-  height: 50px;
-  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 
   outline: none;

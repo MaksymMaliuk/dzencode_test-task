@@ -6,6 +6,7 @@ import trashCan from '../../public/assets/icon_trash.svg';
 import { useDispatch } from "react-redux";
 import { actions } from "@/services/store/productsSlice";
 import Image from "next/legacy/image";
+import { BASE_URL } from "@/services/constants";
 
 type Props = {
   product: Product
@@ -33,12 +34,10 @@ export const ProductItem: FC<Props> = ({ product }) => {
   const uahPrice = findPriceBySymbol(price, 'UAH');
   const usdPrice = findPriceBySymbol(price, 'USD');
 
-  const BASE_URL = 'https://inventory-backend-app.onrender.com';
-
   return(
     <li className={`${styles['product']} row gx-0`}>
       <div className={`${styles['product__image']} col-1`}>
-        <Image 
+        <Image
           src={`${BASE_URL}/${photo}`} 
           alt={title}
           objectFit="contain"

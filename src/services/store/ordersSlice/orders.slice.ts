@@ -1,19 +1,37 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { createSlice, CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 import ordersFromServer from '../../../orders.json';
 import { Order } from '@/types/Order';
 
-const initialState = [...ordersFromServer];
+const initialState: Order[] = [...ordersFromServer];
+
+interface OrderPayload {
+  orderId: number;
+  productId: number;
+}
+
+const removeProductReducer: CaseReducer<Order[], PayloadAction<OrderPayload>> = (
+  state, action
+  ) => {
+  const { orderId, productId } = action.payload;
+  
+  return state.map(order => {
+    if (order.id === orderId) {
+      console.log(order.id);
+      
+      return {
+        ...order,
+        products: order.products.filter(product => product.id !== productId)
+      };
+    }
+    return order;
+  });
+};
 
 const ordersSlice = createSlice({
   name: 'orders',
   initialState,
   reducers: {
-    remove: (state, action: PayloadAction<number>) => (
-      state.filter(item => item.id !== action.payload)
-    ),
-    add: (state, action: PayloadAction<Order>) => (
-      [...state, action.payload]
-    )
+    removeProduct: removeProductReducer
   }
 });
 

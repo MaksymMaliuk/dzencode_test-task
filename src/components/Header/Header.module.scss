@@ -13,4 +13,24 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+
+    max-width: 350px;
+  }
+
+  &__input {
+    padding-left: 35px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    left: 10px;
+  }
 }

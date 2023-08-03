@@ -7,3 +7,7 @@ export interface Order {
   description: string;
   products: Product[];
 }
+
+export interface SelectedOrder {
+  selected: boolean;
+}
