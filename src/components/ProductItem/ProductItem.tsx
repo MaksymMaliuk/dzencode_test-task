@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { actions } from "@/services/store/productsSlice";
 import Image from "next/legacy/image";
 import { BASE_URL } from "@/services/constants";
+import { formatDate } from "@/services/helpers";
 
 type Props = {
   product: Product
@@ -18,8 +19,9 @@ export const ProductItem: FC<Props> = ({ product }) => {
     title,
     price,
     type,
-    date,
-    photo
+    guarantee,
+    photo,
+    serialNumber
   } = product;
 
   const handleRemoveProduct = (id: number) => (
@@ -36,9 +38,11 @@ export const ProductItem: FC<Props> = ({ product }) => {
 
   return(
     <li className={`${styles['product']} row gx-0`}>
+      <div className={`${styles['product__dot']}`} />
+
       <div className={`${styles['product__image']} col-1`}>
         <Image
-          src={`${BASE_URL}/${photo}`} 
+          src={`${BASE_URL}${photo}`} 
           alt={title}
           objectFit="contain"
           width={50}
@@ -46,25 +50,37 @@ export const ProductItem: FC<Props> = ({ product }) => {
         />
       </div>
 
-      <div className={`${styles['product__title']} col`}>
-        {title}
+      <div className={`${styles['product__info']} col`}>
+        <span className={styles['product__title']}>
+          {title}
+        </span>
+
+        <span className={styles['product__serial']}>
+          {serialNumber}
+        </span>
       </div>
 
       <div className={`${styles['product__type']} col-2`}>
         {type}
       </div>
 
-      <div className={`${styles['product__date']} col-1`}>
-        {date}
+      <div className={`${styles['product__guarantee']} col-2`}>
+        <div className={styles['product__guarantee--start']}>
+          {formatDate(guarantee.start, 'medium')}
+        </div>
+
+        <div className={styles['product__guarantee--end']}>
+          {formatDate(guarantee.end, 'medium')}
+        </div>
       </div>
 
       <div className={`${styles['product__price']} col-2`}>
-        <span className={styles['product__price--uah']}>
-          {uahPrice}
-        </span>
-
         <span className={styles['product__price--usd']}>
           {usdPrice}
+        </span>
+
+        <span className={styles['product__price--uah']}>
+          {uahPrice}
         </span>
       </div>
 

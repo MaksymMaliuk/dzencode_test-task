@@ -27,8 +27,8 @@
     "type": "Monitors",
     "specification": "Specification 2",
     "guarantee": {
-      "start": "2023-07-31 09:45:00",
-      "end": "2024-07-31 09:45:00"
+      "start": "2022-07-31 09:45:00",
+      "end": "2023-07-31 09:45:00"
     },
     "price": [
       {"value": 160, "symbol": "USD", "isDefault": 0},
