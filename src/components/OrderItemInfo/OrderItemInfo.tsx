@@ -15,7 +15,7 @@ type Props = {
 
 export const OrderItemInfo: React.FC<Props> = ({ order, onClose }) => {
   const dispatch = useDispatch();
-  
+  const { title, products } = order;
   const handleRemoveProduct = (productId: number) => {
     dispatch(orderActions.removeProduct({ orderId: order.id, productId }))
     
@@ -25,15 +25,21 @@ export const OrderItemInfo: React.FC<Props> = ({ order, onClose }) => {
 
   return (
     <div className={styles['order']}>
-      <div className={styles['order__close-button']}>
-        <Button onClick={() => onClose()} iconPath={iconClose} />
+      <div className={styles['order__header']}>
+        <h4 className={styles['order__header-title']}>
+          {title}
+        </h4>
+        
+        <div className={styles['order__close-button']}>
+          <Button onClick={() => onClose()} iconPath={iconClose} />
+        </div>
       </div>
 
       {listLenght > 0 
         ? (<ul 
             className={styles['order__list']}
             >
-              {order.products.map(product => {
+              {products.map(product => {
                 const { 
                   title, 
                   photo, 
@@ -67,7 +73,11 @@ export const OrderItemInfo: React.FC<Props> = ({ order, onClose }) => {
               })}
             </ul>
 
-        ) : (<h2>Nothing in here...</h2>)
+        ) : (
+              <h2 className={styles['order__list--empty']}>
+                Order is empty ...
+              </h2>
+            )
       }
     </div>
   );
