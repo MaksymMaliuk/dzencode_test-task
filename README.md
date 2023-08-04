@@ -41,7 +41,10 @@ The Inventory App is a web application designed to help manage product inventory
 2. Navigate to the project directory:
   ```
     cd inventory-app
-    code .
+    
+  ```
+  ```
+     code .
   ```
 3. Install the required dependencies:
   ```
