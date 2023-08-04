@@ -5,10 +5,11 @@ import { NavBar } from '@/components/NavBar/NavBar';
 import styles from './layout.module.scss';
 import { Roboto } from '@next/font/google';
 import Providers from './providers';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Home Page',
-  description: 'It is simple NextJS app ',
+  description: 'It is a simple NextJS app',
 }
 
 const mainFont = Roboto({
