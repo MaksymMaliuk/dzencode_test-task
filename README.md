@@ -2,7 +2,7 @@
 
 The Inventory App is a web application designed to help manage product inventory and orders efficiently. It provides features to view and manipulate product and order data, giving users the ability to remove products from orders and filter products by type. The app is built using React and Redux for state management, and it utilizes TypeScript for enhanced code quality and development experience.
 
-## Demonstration [LINK](https://vercel.com/maksymmaliuk/inventory-app)
+## Demonstration [LINK](https://dzencode-test-task.vercel.app/)
 
 ## Table of Contents
 
