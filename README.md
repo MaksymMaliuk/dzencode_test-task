@@ -36,7 +36,7 @@ The Inventory App is a web application designed to help manage product inventory
 
 1. Clone this repository to your local machine using:
 
-   git clone https://github.com/your-username/inventory-app.git
+   git clone https://github.com/MaksymMaliuk/inventory-app.git
 
 2. Navigate to the project directory:
   ```
