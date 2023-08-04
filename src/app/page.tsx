@@ -12,7 +12,12 @@ const HomePage = () => {
         <h2>Description:</h2>
 
         <p>
-          The Inventory App is a web application designed to manage and display orders and products in an organized manner. This app provides users with the ability to view, filter, and manipulate orders and products data.
+          The Inventory App is a web application designed to manage and display orders and products in an organized manner.
+          <br />
+          This app provides users with the ability to view, filter, and manipulate orders and products data.
+        </p>
+        <p>
+          
         </p>
       </div>
 

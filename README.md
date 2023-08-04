@@ -2,6 +2,8 @@
 
 The Inventory App is a web application designed to help manage product inventory and orders efficiently. It provides features to view and manipulate product and order data, giving users the ability to remove products from orders and filter products by type. The app is built using React and Redux for state management, and it utilizes TypeScript for enhanced code quality and development experience.
 
+## Demonstration [LINK](https://vercel.com/maksymmaliuk/inventory-app)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -20,7 +22,6 @@ The Inventory App is a web application designed to help manage product inventory
 - Responsive design to ensure a seamless experience on various devices.
 
 ## Technologies Used
-
 - **React**: The application is built using the React library for creating dynamic user interfaces.
 - **TypeScript**: TypeScript is used to add static typing to JavaScript, enhancing code quality and development experience.
 - **Redux**: Redux is used for state management, ensuring efficient handling of application data.
@@ -31,6 +32,7 @@ The Inventory App is a web application designed to help manage product inventory
 - **Next.js**: The Next.js framework is used for server-side rendering and optimizing the application's performance.
 - **Image Optimization**: Images are optimized using Next.js's built-in image optimization features.
 - **Vercel**: The application is deployed on the Vercel platform for easy hosting and scaling.
+- **Express**: Was used to create a static file server. [REPO LINK](https://github.com/MaksymMaliuk/express-server)
 
 ## Installation
 
