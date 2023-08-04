@@ -50,7 +50,7 @@ const HomePage = () => {
 
           <li>
             <p>
-              <b>Redux:</b> The Redux Toolkit package is utilized to simplify the creation of Redux-related code.
+              <b>Redux Tool Kit:</b> The Redux Toolkit package is utilized to simplify the creation of Redux-related code.
             </p>
           </li>
 
@@ -62,7 +62,7 @@ const HomePage = () => {
 
           <li>
             <p>
-              <b>Next.js:</b> The Next.js framework is used for server-side rendering and optimizing the application`&apos;`s performance.
+              <b>Next.js:</b> The Next.js framework is used for server-side rendering and optimizing the application&apos;s performance.
             </p>
           </li>
 
