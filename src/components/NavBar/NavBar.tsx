@@ -6,6 +6,9 @@ import { NavLink } from '../NavLink';
 
 const navItems = [
   {
+    label: 'Home Page',
+    href: '/',
+  }, {
     label: 'Orders',
     href: '/orders',
   },

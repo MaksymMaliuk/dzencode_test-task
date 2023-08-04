@@ -2,7 +2,7 @@ import { createSlice, CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 import ordersFromServer from '../../../orders.json';
 import { Order } from '@/types/Order';
 
-const initialState: Order[] = [...ordersFromServer];
+const initialState: Order[] | [] = [...ordersFromServer];
 
 interface OrderPayload {
   orderId: number;
@@ -27,11 +27,16 @@ const removeProductReducer: CaseReducer<Order[], PayloadAction<OrderPayload>> = 
   });
 };
 
+const setOrdersReducer = (state: Order[], action: PayloadAction<Order[]>) => {
+  return action.payload; 
+};
+
 const ordersSlice = createSlice({
   name: 'orders',
   initialState,
   reducers: {
-    removeProduct: removeProductReducer
+    removeProduct: removeProductReducer,
+    setOrders: setOrdersReducer
   }
 });
 

@@ -1,0 +1,7 @@
+@mixin guarantee-style($position) {
+  &::before {
+    content: '#{$position}: ';
+    font-size: 14px;
+    color: $color-gray;
+  }
+}

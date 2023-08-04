@@ -3,19 +3,24 @@ import styles from './OrderItem.module.scss';
 import { Order } from '@/types/Order';
 import { Button } from '../Button';
 import iconList from '../../public/assets/icon_list.svg';
+import iconArrow from '../../public/assets/icon_arrow.svg';
 import classnames from 'classnames';
+import { formatDate } from '@/services/helpers';
+import Image from 'next/legacy/image';
 
 
 type Props = {
   order: Order
   onSelect: (orderId: number) => void
   isSelected: boolean
+  selectedId: number | null
 }
 
 export const OrderItem: FC<Props> = ({ 
   order, 
   onSelect, 
-  isSelected 
+  isSelected,
+  selectedId
 }) => {
   const {
     title,
@@ -23,21 +28,6 @@ export const OrderItem: FC<Props> = ({
     products
   } = order;
   
-  const dividedData = date.split(' ');
-
-  const formatDate = (inputDate: string) => {
-    const months = [
-      'january', 'february', 'march', 'april', 'may', 'june',
-      'july', 'august', 'september', 'october', 'novemver', 'december'
-    ];
-
-    const dateParts = inputDate.split('-');
-    const year = parseInt(dateParts[0]);
-    const month = parseInt(dateParts[1]) - 1;
-    const day = parseInt(dateParts[2]);
-
-    return `${day} ${months[month]} ${year} p.`;
-  };
 
   const getSum = (currency: string) => {
     const sum = products.reduce(
@@ -57,6 +47,8 @@ export const OrderItem: FC<Props> = ({
   const sumUAH = getSum('UAH');
   const sumUSD = getSum('USD');
 
+  const isOrderSelected = selectedId === order.id;
+
   return (
     <li className={styles['order']}>
       {!isSelected && (
@@ -71,7 +63,7 @@ export const OrderItem: FC<Props> = ({
         <Button iconPath={iconList} onClick={() => onSelect(order.id)}/>
       </div>
 
-      <div className={`${styles['order__counter']} col-3 mx-2`}>
+      <div className={`${styles['order__counter']} col-2 mx-2`}>
         <span className={styles['order__counter-value']}>
           {order.products?.length}
         </span>
@@ -88,13 +80,14 @@ export const OrderItem: FC<Props> = ({
         )}
       >
         <span className={styles['order__date--short']}>
-          {formatDate(dividedData[0])}
+          {formatDate(date, 'short')}
         </span>
 
         <span className={styles['order__date--long']}>
-          {dividedData[0]}
+          {formatDate(date, 'long')}
         </span>
       </div>
+
       {!isSelected && (
         <div className={`${styles['order__total-price']} col-2 gx-0`}>
           <span className={styles['order__total-price--usd']}>
@@ -106,6 +99,12 @@ export const OrderItem: FC<Props> = ({
           </span>
         </div>
       )}
+
+        <div className={styles['order__arrow-pointer']}>
+          {isSelected && isOrderSelected && (
+            <Image alt='arrow' width={20} height={30} src={iconArrow}/>
+          )}
+        </div>
     </li>
   )
 }

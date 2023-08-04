@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Inventory App
 
-## Getting Started
+The Inventory App is a web application designed to help manage product inventory and orders efficiently. It provides features to view and manipulate product and order data, giving users the ability to remove products from orders and filter products by type. The app is built using React and Redux for state management, and it utilizes TypeScript for enhanced code quality and development experience.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Display a list of orders with relevant information such as title, date, product count, and total price.
+- View detailed information about a selected order, including its products.
+- Remove products from orders, which automatically updates the order details.
+- Filter products by type (category) to quickly find specific products.
+- Responsive design to ensure a seamless experience on various devices.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **React**: The application is built using the React library for creating dynamic user interfaces.
+- **TypeScript**: TypeScript is used to add static typing to JavaScript, enhancing code quality and development experience.
+- **Redux**: Redux is used for state management, ensuring efficient handling of application data.
+- **Redux Toolkit**: The Redux Toolkit package is utilized to simplify the creation of Redux-related code.
+- **Lodash**: The Lodash library is employed for utility functions, aiding in managing arrays and objects.
+- **SCSS**: The SCSS (Sass) preprocessor is used for styling components, enabling more structured and maintainable CSS code.
+- **Bootstrap**: Bootstrap is used for responsive and visually appealing UI components, speeding up the development process.
+- **Next.js**: The Next.js framework is used for server-side rendering and optimizing the application's performance.
+- **Image Optimization**: Images are optimized using Next.js's built-in image optimization features.
+- **Vercel**: The application is deployed on the Vercel platform for easy hosting and scaling.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone this repository to your local machine using:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   git clone https://github.com/your-username/inventory-app.git
 
-## Deploy on Vercel
+2. Navigate to the project directory:
+  ```
+    cd inventory-app
+  ```
+3. Install the required dependencies:
+  ```
+  npm install
+  ```
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Start the development server:
+  ```
+  npm run dev
+  ```
+2. Open your web browser and visit http://localhost:3000 to use the Inventory App.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

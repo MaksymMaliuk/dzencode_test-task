@@ -34,6 +34,14 @@
     font-weight: 400;
   }
 
+  &__arrow-pointer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 20px;
+  }
+
   &__button {
     width: 50px;
     height: 50px;
@@ -43,7 +51,12 @@
   &__date {
     display: inherit;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+
+    &--short {
+      color: $color-gray;
+      font-size: 14px;
+    }
   }
 
   &__total-price {
